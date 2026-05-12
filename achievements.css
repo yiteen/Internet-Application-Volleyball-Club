@@ -1,0 +1,156 @@
+﻿/* Filename:achievements.css
+/* --- SLIDESHOW CONTAINER --- */
+.achievement-container {
+    position: relative;
+    max-width: 800px;
+    height: 450px;
+    margin: 30px auto;
+    overflow: hidden;
+    border: 5px solid #FFD700; /* Gold theme for achievements */
+    border-radius: 12px;
+    background-color: #1a1a1a;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.achieve-slide img {
+    width: 100%;
+    height: 450px;
+    object-fit: contain; 
+    background-color: #1a1a1a; 
+}
+
+/* --- CAPTION STYLE --- */
+.achieve-caption {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 31, 63, 0.85); /* Navy Blue background */
+    color: #FFD700; /* Gold text */
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* --- CLICKABLE DOTS --- */
+.achieve-dot {
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+    margin: 0 6px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.achieve-dot.active-dot {
+    background-color: #FFD700; /* Gold for active dot */
+    transform: scale(1.3);
+}
+
+/* --- NAVIGATION ARROWS --- */
+.prev-btn, .next-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 50%;
+    user-select: none;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+.next-btn { right: 15px; }
+.prev-btn { left: 15px; }
+
+/* --- FADE ANIMATION --- */
+.fade {
+    animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+
+
+
+/* Container for each milestone */
+.timeline-item {
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    justify-content: space-between;
+    gap: 40px; /* Space between text and image */
+    margin-bottom: 50px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px); /* Small lift when hovering */
+}
+
+/* Alternate the side: Image on right, then Image on left */
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Text Styling */
+.timeline-text {
+    flex: 1; /* Takes up 50% of the space */
+}
+
+.timeline-text h3 {
+    color: #001f3f; /* Navy */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    border-left: 5px solid #FFD700; /* Gold accent */
+    padding-left: 15px;
+}
+
+.timeline-text p {
+    font-size: 1.1rem; /* Bigger, readable text */
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Image Styling */
+.timeline-img-container {
+    flex: 0 0 35%;
+    display: flex;
+    justify-content: center;
+	align-items:center;
+}
+
+.timeline-img {
+    width: 350px;   /* Fixed width */
+    height: 250px;  /* Fixed height */
+    object-fit: cover; /* This CROP the image so it fills the box perfectly */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive: Stack them on top of each other on mobile */
+@media (max-width: 768px) {
+    .timeline-item, .timeline-item:nth-child(even) {
+        flex-direction: column;
+        text-align: center;
+    }
+    .timeline-img {
+        height: auto;
+    }
+}

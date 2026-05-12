@@ -1,0 +1,75 @@
+﻿/* Filename: submit_form.css */
+/* Success Message Styles */
+.success-message {
+    background-color: #eafaf1; /* Light green background for success */
+    border: 2px solid #4caf50; /* Green border to indicate success */
+    border-radius: 10px; /* Rounded corners */
+    padding: 30px; /* Padding for spacing */
+    text-align: center; /* Center the text */
+    max-width: 600px; /* Limit width */
+    margin: 0 auto; /* Center on the page */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    animation: fadeIn 1s ease-out; /* Fade-in animation for smoothness */
+}
+
+/* Header Styling */
+.success-message h1 {
+    color: #4caf50; /* Green color for the heading */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Paragraph Styling */
+.success-message p {
+    color: #333; /* Dark text for readability */
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Button Styling */
+.success-message button {
+    background-color: #4caf50; /* Green background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.success-message button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .success-message {
+        padding: 20px;
+    }
+
+    .success-message h1 {
+        font-size: 1.5rem;
+    }
+
+    .success-message p {
+        font-size: 0.9rem;
+    }
+
+    .success-message button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}

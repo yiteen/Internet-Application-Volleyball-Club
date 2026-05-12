@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | APU Volleyball Club</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="events.css" type="text/css">
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="header-container">
+            <!-- Logo removed from header as per new layout -->
+            <div class="banner-container">
+                <img src="images/header_new.png" alt="APU Volleyball Club Banner" class="header-banner">
+            </div>
+        </div>
+    </header>
+
+    <nav id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">About Club</a>
+                <div class="dropdown-content">
+                    <a href="mission.html">Mission</a>
+                    <a href="history.html">History</a>
+                    <a href="committee.html">Committee</a>
+                    <a href="coaches.html">Coaches</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Guidelines</a>
+                <div class="dropdown-content">
+                    <a href="attire.html">Attire</a>
+                    <a href="rules.html">Rules</a>
+                    <a href="safety.html">Safety</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Activities</a>
+                <div class="dropdown-content">
+                    <a href="events.html" class="active">Events</a>
+                    <a href="achievements.html">Achievements</a>
+                    <a href="news.html">News</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Contact</a>
+                <div class="dropdown-content">
+                    <a href="register.html">Register</a>
+                    <a href="enquiry.html">Enquiry</a>
+                    <a href="feedback.html">Feedback</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="content-area">
+        <section>
+            <h2>Upcoming Events</h2>
+            <p>Stay ahead of the game! Click on any event row to see full registration details and requirements.</p>
+            <br/>
+            
+            <table class="events-table" id="upcomingTable">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Event Name</th>
+                        <th>Location</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="showUpcoming('2026 Season Kickoff', '<strong>Requirement:</strong> Open to all students. <br/><strong>Perks:</strong> Free jerseys for first 30!<br/><strong>To Register:</strong> WhatsApp 012-345 6789 (Admin)')">
+				        <td>2026-01-15</td>
+				        <td>2026 Season Kickoff</td>
+				        <td>APU Sports Hall</td>
+				        <td style="color: green; font-weight: bold;">OPEN</td>
+				    </tr>
+				    <tr onclick="showUpcoming('National Varsity Cup', '<strong>Overview:</strong> The most prestigious university tournament in Malaysia. <br><strong>Selection:</strong> Trials begin in February. Only club members are eligible.<br/><strong>To Register:</strong> WhatsApp 019-876 5432 (Coach)')">
+				        <td>2026-03-20</td>
+				        <td>National Varsity Cup</td>
+				        <td>Penang Sports Center</td>
+				        <td style="color: orange; font-weight: bold;">COMING SOON</td>
+				    </tr>            	
+				</tbody>
+            </table>
+            
+            <div id="upcoming-detail-display" class="detail-box" style="display: none;">
+		        <h3 id="upcoming-name"></h3>
+		        <p id="upcoming-info"></p>
+		        <button onclick="this.parentElement.style.display='none'">Close Details</button>		    </div>
+		</section>
+
+        <br/><br/>
+
+        <section>
+            <h2>Past Events Record</h2>
+            <p>Click a row to see the summary of our successful 2025 activities.</p>
+            <br/>
+            
+            <table class="events-table" id="pastTable">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Event Name</th>
+                        <th>Location</th>
+                        <th>Description</th>
+                        <th style="display:none;">Extra Details</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2025-01-15</td>
+                        <td>New Semester Welcome Training</td>
+                        <td>APU Sports Hall</td>
+                        <td>Introduction and skill-building sessions.</td>
+            			<td style="display:none;">We welcomed 45 new students! The session focused on underhand passes and service drills. Refreshments were served at the end.</td>                    
+                    </tr>
+                    <tr>
+                    <td>2025-02-10</td>
+                        <td>Internal Friendly Tournament</td>
+                        <td>APU Volleyball Court</td>
+                        <td>Teams compete in friendly matches.</td>
+            			<td style="display:none;">8 mixed teams were formed. 'Team Spike' took first place. It was a great way to see the new members in action!</td>
+                    </tr>
+                    <tr>
+			            <td>2025-03-05</td>
+			            <td>Inter-University Invitational</td>
+			            <td>Partner University Campus</td>
+			            <td>Participate in competitions.</td>
+			            <td style="display:none;">Our Varsity team played against Sunway and Taylor's. We finished in 2nd place overall. MVP: Sarah from the Women's team.</td>
+			        </tr>
+                    <tr>
+			            <td>2025-04-20</td>
+			            <td>Skills Workshop</td>
+			            <td>APU Sports Hall</td>
+			            <td>Specialized coaching sessions.</td>
+			            <td style="display:none;">Guest coach from the National Team joined us to teach jump-serve techniques and defensive blocking positions.</td>
+			        </tr>   
+			        <tr>
+			            <td>2025-05-10</td>
+			            <td>End-of-Semester Social & Tournament</td>
+			            <td>APU Sports Hall</td>
+			            <td>Fun matches and social activities.</td>
+			            <td style="display:none;">Final celebration! We had a pizza party after the games and announced the "Most Improved Player" awards.</td>
+			        </tr>            
+				</tbody>
+            </table>
+
+            <div id="past-detail-display" class="detail-box past-theme" style="display: none;">
+			    <h3 id="past-name"></h3>
+			    <p id="past-info"></p>
+			    <button onclick="this.parentElement.style.display='none'">Close Record</button>
+			</div>
+        </section>
+
+        <br/><br/>
+
+        <section>
+            <h2>Past Events Highlights</h2>
+            <div class="event-gallery" id="slideshow-container">
+                <figure class="slide fade">
+                    <img src="images/event1.png" alt="Tournament 2025">
+                    <figcaption>Internal Tournament 2025</figcaption>
+                </figure>
+                <figure class="slide fade">
+                    <img src="images/event2.png" alt="Match 2025">
+                    <figcaption>Inter-University Match 2025</figcaption>
+                </figure>
+                <figure class="slide fade">
+                    <img src="images/event3.png" alt="Workshop 2025">
+                    <figcaption>Skills Workshop 2025</figcaption>
+                </figure>
+                
+                <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+                <a class="next" onclick="moveSlide(1)">&#10095;</a>
+            </div>
+            
+            <div style="text-align:center; margin-top: 15px;">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+        </section>
+    </div>
+    	
+    <footer class="page-footer">
+        <div class="footer-image-container">
+            <img src="images/footer_new.png" alt="APU Volleyball Club Footer" class="footer-image">
+        </div>
+        <div class="footer-container">
+            <!-- Column 1: About Us -->
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="mission.html">Mission & Vision</a></li>
+                    <li><a href="committee.html">Organisation Chart</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2: Happening -->
+            <div class="footer-col">
+                <h3>Happening</h3>
+                <ul>
+                    <li><a href="news.html">Latest News</a></li>
+                    <li><a href="events.html">Event Calendar</a></li>
+                </ul>
+                <br>
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Stay Connected -->
+            <div class="footer-col">
+                <h3>Stay Connected</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/apu.volleyballl/" target="_blank"><img
+                            src="images/instagram_icon.png" alt="Instagram" style="width: 30px; height: 30px;"></a>
+                </div>
+                <div class="contact-info">
+                    <p><a href="mailto:volleyball@apu.edu.my">volleyball@apu.edu.my</a></p>
+                    <p>+60 3-8996 1000</p>
+                    <p>Asia Pacific University (APU),<br>Jalan Teknologi 5,<br>57000 Kuala Lumpur</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 APU Volleyball Club. All rights reserved.</p>
+        </div>
+    </footer>
+
+	<script src="events.js"></script>
+	
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+﻿/* Filename: index.css*/
+
+/* HERO SECTION */
+#hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px; /* some horizontal padding */
+    background: #eef2ff;
+    border-radius: 50px; 
+    margin: 20px 5% 40px 5%; /* Space around the hero box */
+    color: #001f3f;
+}
+
+/* Hero content wrapper above overlay */
+.hero-text {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-logo {
+    width: 220px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.hero-logo:hover {
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Hero headings */
+#hero h1 {
+    font-size: 3.2rem;
+    line-height: 1.6; /* more spacing between lines */
+    margin-bottom: 20px;
+    color: #001f3f; /* dark blue for contrast */
+}
+
+#hero p {
+    font-size: 1.3rem;
+    line-height: 1.8; /* more spacing */
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #2b5cff;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+    background: #1a3fbf;
+    transform: scale(1.05);
+}
+
+/* ABOUT SECTION */
+#about {
+    text-align: center;
+    padding: 60px 10%;
+}
+
+.about-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.about-card {
+    background: #fff;
+    padding: 28px 22px;
+    border-radius: 20px;
+    width: 300px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+}
+
+.about-card img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+/* HIGHLIGHTS SECTION */
+#highlights {
+    background: #eef2ff;
+    text-align: center;
+    border-radius: 50px;
+    margin: 40px 5%;     /* Adds space outside so the round corners are visible */
+    padding: 80px 5%;    /* Space inside for the cards */
+    
+    text-align: center;
+    border: none !important;
+}
+
+.highlights-cards {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, 280px);
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.highlight-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column; /* Stack image on top of text */
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+	min-height: 180px; /* Forces all boxes to be at least this tall */
+    text-align: center;
+    gap: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.highlight-card img {
+	width: 60px; /* Made icons a bit bigger and consistent */
+    height: 60px;
+    object-fit: contain; /* Prevents stretching */
+    margin-bottom: 10px;}
+    
+.highlight-card p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #333;
+}
+
+/* RESPONSIVE */
+@media (max-width:1024px) {
+    .about-cards, .highlights-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width:640px) {
+    #hero h1 { font-size: 36px; }
+    #hero p { font-size: 18px; }
+    .about-card, .highlight-card { width: 90%; }
+}

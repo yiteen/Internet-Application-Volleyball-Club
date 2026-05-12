@@ -1,0 +1,61 @@
+﻿/* Filename: rules.css*/
+
+.modern-rules {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px;
+}
+
+.rule-item {
+    background: #ffffff;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #dab600; /* Gold line */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    cursor: pointer; /* Shows it’s clickable */
+}
+
+/* Flex layout for icon + title */
+.rule-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Icon size */
+.rule-icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Rule title style */
+.rule-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #001f3f;
+}
+
+/* Description hidden by default */
+.rule-desc {
+    display: none;
+    margin-top: 12px;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Show description when active */
+.rule-item.active .rule-desc {
+    display: block;
+}
+
+/* Mobile friendly */
+@media (max-width: 768px) {
+    .modern-rules {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+}

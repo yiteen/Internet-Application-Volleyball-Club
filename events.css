@@ -1,0 +1,146 @@
+﻿/* Filename: events.css */
+
+/* --- 1. SLIDESHOW --- */
+#slideshow-container {
+    position: relative;
+    max-width: 800px;
+    height: 400px;
+    margin: 20px auto;
+    background-color: #000;
+    border: 5px solid var(--primary-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.slide img { 
+    width: 100%;
+    height: 450px;
+    object-fit: contain; 
+    background-color: #1a1a1a; 
+}
+
+figcaption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 31, 63, 0.85);
+    color: var(--secondary-color);
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Slideshow Navigation Buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    text-decoration: none;
+}
+
+.next { right: 0; border-radius: 3px 0 0 3px; }
+.prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
+
+/* Dots styling - FIXED */
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease, transform 0.2s;
+}
+
+.dot.active { 
+    background-color: var(--secondary-color); 
+    transform: scale(1.3); 
+}
+
+/* --- 2. TABLES --- */
+.events-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing:0 5px;
+    margin-bottom: 20px;
+    background: transparent;
+    font-family: sans-serif;
+}
+
+.events-table th {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.events-table td { 
+    padding: 12px; 
+    border-bottom: 1px solid var(--border-gray); 
+}
+
+.events-table tbody tr {
+	background-color:white;
+    cursor: pointer;
+    transition: 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+}
+
+.events-table tbody tr:hover {
+    background-color: var(--hover-blue);
+    transform: translateY(-5px); /* Moves row up */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Adds shadow when lifted */
+    position: relative; /* Ensures the lifted row stays on top of others */
+    z-index: 1;
+}
+
+/* --- 3. DETAIL BOXES --- */
+.detail-box {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f7ff; 
+    border: 2px solid #007bff; 
+    border-radius: 10px;       
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    animation: slideDown 0.4s ease-out;    
+}
+
+/* Specifically for the PAST box theme */
+.past-theme {
+    background-color: #fffde7; /* Gold Tint */
+    border: 2px solid var(--secondary-color);
+}
+
+.detail-box button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.detail-box button:hover { background-color: #333; }
+
+/* --- 4. ANIMATIONS --- */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade { animation: fadeEffect 1s; }
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}

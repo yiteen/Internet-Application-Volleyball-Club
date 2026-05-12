@@ -1,0 +1,138 @@
+﻿/* Filename: mission.css*/
+
+/* GENERAL STYLES */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fc;
+}
+
+
+/* VISION SECTION */
+.vision-box {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.vision-img {
+    width: 100%;
+    max-width: 480px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.vision-text h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.vision-text p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* MISSION TITLE */
+.mission-title {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 45px;
+}
+
+/* MISSION WRAPPER (ALL CARDS) */
+.mission-wrapper {
+    display: flex;
+    flex-wrap: wrap;           /* allows wrapping to next row */
+    justify-content: center;   /* centers all rows automatically */
+    gap: 28px;
+    max-width: 1100px;         /* optional: keeps alignment with vision section */
+    margin: 0 auto;            /* centers wrapper in the page */
+}
+
+/* MISSION CARD */
+.mission-card {
+    background: #ffffff;
+    padding: 32px 22px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 320px;             /* fixed width for alignment */
+}
+
+/* Icons */
+.mission-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 6px;
+    background: #eef2ff;
+    border-radius: 50%;
+    margin-bottom: 22px;
+}
+
+/* Text */
+.mission-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Accent Line */
+.mission-card::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #2b5cff;
+    margin: 18px auto 0;
+    border-radius: 2px;
+}
+
+/* Hover Effect */
+.mission-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.18);
+}
+
+/* RESPONSIVE */
+
+/* Vision stacking */
+@media (max-width: 900px) {
+    .vision-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .vision-img {
+        height: 260px;
+    }
+}
+
+/* Tablet: 2 per row */
+@media (max-width: 1024px) {
+    .mission-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+/* Mobile: 1 per row */
+@media (max-width: 640px) {
+    .mission-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .mission-card {
+        width: 100%;
+        max-width: 320px;
+    }
+}

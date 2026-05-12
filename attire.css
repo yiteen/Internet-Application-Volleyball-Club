@@ -1,0 +1,36 @@
+﻿/* Filename: attire.css */
+#content-area li {
+    display: flex;
+    align-items: center;              /* center text with image */
+    justify-content: flex-start;      /* keep content together */
+    gap: 40px;                        /* space between image & text */
+    margin-bottom: 50px;
+    padding: 20px 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+/* Hover (same feel as timeline) */
+#content-area li:hover {
+    transform: translateY(-3px);
+}
+
+/* Item name */
+#content-area li strong {
+    color: #001f3f;                  /* Navy */
+    font-size: 1.2rem;
+    padding-right: 20px;
+    border-right: 4px solid #FFD700; /* Gold accent */
+    min-width: 260px;                /* aligns all names */
+    text-align: right;
+}
+
+/* Description text */
+#content-area li .desc {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: bold;
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | APU Volleyball Club</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css" type="text/css">
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="header-container">
+            <!-- Logo removed from header as per new layout -->
+            <div class="banner-container">
+                <img src="images/header_new.png" alt="APU Volleyball Club Banner" class="header-banner">
+            </div>
+        </div>
+    </header>
+
+    <nav id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">About Club</a>
+                <div class="dropdown-content">
+                    <a href="mission.html">Mission</a>
+                    <a href="history.html">History</a>
+                    <a href="committee.html">Committee</a>
+                    <a href="coaches.html">Coaches</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Guidelines</a>
+                <div class="dropdown-content">
+                    <a href="attire.html">Attire</a>
+                    <a href="rules.html">Rules</a>
+                    <a href="safety.html">Safety</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Activities</a>
+                <div class="dropdown-content">
+                    <a href="events.html">Events</a>
+                    <a href="achievements.html">Achievements</a>
+                    <a href="news.html">News</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Contact</a>
+                <div class="dropdown-content">
+                    <a href="register.html">Register</a>
+                    <a href="enquiry.html">Enquiry</a>
+                    <a href="feedback.html" class="active">Feedback</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="content-area">
+        <section>
+            <h2>Feedback Form</h2>
+            <p>We value your feedback! Please fill out the form below to help us improve the APU Volleyball Club.</p>
+            <form name="feedbackForm" id="feedbackForm" method="post" action="submit_feedback.html">
+                <table class="form-container">
+                    <tr>
+                        <td class="label">Full Name</td>
+                        <td class="colon">:</td>
+                        <td><input type="text" name="fullname" id="fullname" maxlength="60" required></td>
+                    </tr>
+                    <tr>
+                        <td class="label">Email</td>
+                        <td class="colon">:</td>
+                        <td><input type="email" name="email" id="email" maxlength="60" required></td>
+                    </tr>
+                    <tr>
+                        <td class="label">Rating</td>
+                        <td class="colon">:</td>
+                        <td>
+                            <label><input type="radio" name="rating" value="Excellent"> Excellent</label>
+                            <label><input type="radio" name="rating" value="Good"> Good</label>
+                            <label><input type="radio" name="rating" value="Average"> Average</label>
+                            <label><input type="radio" name="rating" value="Poor"> Poor</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label" style="vertical-align: top;">Comments</td>
+                        <td class="colon" style="vertical-align: top;">:</td>
+                        <td><textarea name="comments" id="comments" rows="5" cols="40" placeholder="Your suggestions or feedback..."
+                                required></textarea></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <button type="submit">Submit</button>
+                            <button type="reset">Reset</button>
+                        </td>
+                    </tr>
+                    
+                    <!-- Back to Homepage Button -->
+					<tr>
+			        	<td></td>
+			           	<td></td>
+			           	<td>
+			           		<button type="button" onclick="goToHomepage()">Back to Homepage</button>
+			           	</td>
+		        	</tr>
+
+                </table>
+            </form>
+        </section>
+    </div>
+
+    <footer class="page-footer">
+        <div class="footer-image-container">
+            <img src="images/footer_new.png" alt="APU Volleyball Club Footer" class="footer-image">
+        </div>
+        <div class="footer-container">
+            <!-- Column 1: About Us -->
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="mission.html">Mission & Vision</a></li>
+                    <li><a href="committee.html">Organisation Chart</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2: Happening -->
+            <div class="footer-col">
+                <h3>Happening</h3>
+                <ul>
+                    <li><a href="news.html">Latest News</a></li>
+                    <li><a href="events.html">Event Calendar</a></li>
+                </ul>
+                <br>
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Stay Connected -->
+            <div class="footer-col">
+                <h3>Stay Connected</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/apu.volleyballl/" target="_blank"><img
+                            src="images/instagram_icon.png" alt="Instagram" style="width: 30px; height: 30px;"></a>
+                </div>
+                <div class="contact-info">
+                    <p><a href="mailto:volleyball@apu.edu.my">volleyball@apu.edu.my</a></p>
+                    <p>+60 3-8996 1000</p>
+                    <p>Asia Pacific University (APU),<br>Jalan Teknologi 5,<br>57000 Kuala Lumpur</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 APU Volleyball Club. All rights reserved.</p>
+        </div>
+    </footer>
+	
+	<script src="feedback.js" type="text/javascript"></script>
+
+</body>
+
+</html>

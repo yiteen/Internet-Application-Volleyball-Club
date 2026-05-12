@@ -1,0 +1,133 @@
+﻿/* Filename: enquiry.css /*
+
+/* Form Container */
+.form-container, .form-table {
+    display: flex;
+    justify-content: center; /* Centers the form horizontally */
+    padding: 20px;
+    border: 3px solid var(--primary-color); /* Bold outer border */
+    border-radius: 12px; /* Rounded corners for the form */
+    background-color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slight shadow effect */
+    max-width: 800px; /* Limit the form width */
+    width: 100%;
+    margin: 0 auto; /* Ensure it's centered */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    border-radius: 8px;
+    overflow: hidden; /* Ensure corners are rounded */
+    padding: 20px;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+table td:last-child {
+    border-right: none;
+}
+
+/* Table Headers */
+td.label {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding-right: 15px;
+}
+
+td.colon {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Input Fields */
+input[type=text], input[type=email], input[type=tel], textarea {
+    width: 100%;
+    padding: 8px 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+
+/* Focus Effect */
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.2); /* Subtle glow */
+}
+
+/* Buttons */
+button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Button Reset */
+button[type=reset] {
+    background-color: #d9534f;
+    margin-left: 8px;
+}
+
+button[type=reset]:hover {
+    background-color: #c9302c;
+}
+
+/* Back to Homepage Button */
+button[type=button] {
+    background-color: #6c757d;
+    color: #fff;
+    margin-top: 10px;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+button[type=button]:hover {
+    background-color: #5a6268;
+}
+
+/* Textarea */
+textarea {
+    resize: vertical;
+    font-size: 0.9rem;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        padding: 10px;
+    }
+
+    td.label {
+        min-width: 150px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}

@@ -1,0 +1,91 @@
+﻿/* Filename: history.css */
+
+.history-slideshow {
+    position: relative;
+    max-width: 800px;
+    height: 450px; 
+    margin: 30px auto 10px auto;
+    overflow: hidden;
+    border: 5px solid #FFD700;
+    border-radius: 12px;
+    background-color: #000;
+    display: flex;
+    align-items: flex-start; 
+}
+
+.milestone-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.milestone-slide img {
+	width: 100%;
+    height: 450px;      
+    object-fit: cover;   
+    object-position: center; 
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.milestone-caption {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(transparent, rgba(0, 31, 63, 0.9)); 
+    color: #FFD700; /* Gold text */
+    width: 100%;
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+    box-sizing: border-box;
+    backdrop-filter: blur(4px);
+    font-size: 16px; 
+    line-height: 1.5;
+}
+
+/* Dots Styling */
+/* Container for the dots outside the image */
+.dot-container {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.history-dot {
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+    margin: 0 6px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.history-dot.active {
+    background-color: #FFD700; 
+    transform: scale(1.3);
+}
+
+.history-dot:hover {
+    background-color: #888;
+}
+
+/* Arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background 0.3s;
+    z-index: 2;
+}
+
+.next { right: 15px; }
+.prev { left: 15px; }
